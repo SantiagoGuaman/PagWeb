@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Login
+{% endblock %}
+{% block contenido %}
+<section class="text-center">
+    <div class="mx-2 mx-md-2 mt-2 mb-2" >
+        <div class="card-body">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <h2 class="fw-bold mb-2 mt-5">Ingresar</h2>
+                    <form method="POST" action=".">
+                        {% csrf_token %}
+
+                        <div class="form-outline mb-4">
+                            {{form.username}}
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            {{form.password}}
+                            </div>
+
+                        <div class="form-outline mb-4">
+                            <p class="text-danger">{{error}}</p>
+                        </div>
+                        <!-- Checkbox -->
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-block mb-4">
+                            Log in
+                        </button>
+
+                        <!-- Register buttons -->
+                        <div class="text-center">
+                            <p>¿Aún no tiene cuenta?</p>
+                            <a  href="{% url 'signin' %}" type="button" class="btn btn-dark btn-floating mx-1">
+                                Registrarse
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

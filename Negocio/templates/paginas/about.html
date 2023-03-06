@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+About Us
+{% endblock %}
+
+{% block contenido %}
+<section id="about-section" class="pt-5 pb-2">
+    <div class="container wrapabout justify-content-center">
+        <div class="red"></div>
+        <div class="row">
+            <div class="col-lg-6 align-items-center justify-content-left d-flex mb-5 mb-lg-0">
+                <div class="blockabout">
+                    <div class="blockabout-inner text-center text-sm-start">
+                        <div class="title-big pb-3 mb-3">
+                            <h3>Santiago Guaman</h3>
+                        </div>
+                        <h6>Estudiante del Tecnológico Superior del Azuay</h6>
+                        <p class="description-p text-muted pe-0 pe-lg-0">
+                            Cursando Desarrollado de Software
+                        </p>
+                        <p>Resolvemos retos importantes
+                            Construimos relaciones de confianza</p>
+                        <p class="description-p text-muted pe-0 pe-lg-0">
+                            Diseñador y Programador
+                        </p>
+                        <div class="sosmed-horizontal pt-3 pb-3">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-5 mt-lg-0">
+                <figure class="potoaboutwrap">
+                    <img src="{% static 'images/Lenin.jpg' %}" alt="potoabout" />
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <div class="container wrapabout justify-content-center">
+        <div class="red"></div>
+        <div class="row">
+            <div class="col-lg-6 align-items-center justify-content-left d-flex mb-5 mb-lg-0">
+                <div class="blockabout">
+                    <div class="blockabout-inner text-center text-sm-start">
+                        <div class="title-big pb-3 mb-3">
+                            <h3>Lenin Córdova</h3>
+                        </div>
+                        <h6>Estudiante del Tecnológico Superior del Azuay</h6>
+                        <p class="description-p text-muted pe-0 pe-lg-0">
+                            Cursando Desarrollado de Software
+                        </p>
+                        <p>Resolvemos retos importantes
+                            Construimos relaciones de confianza</p>
+                        <p class="description-p text-muted pe-0 pe-lg-0">
+                            Diseñador y Programador
+                        </p>
+                        <div class="sosmed-horizontal pt-3 pb-3">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-5 mt-lg-0">
+                <figure class="potoaboutwrap">
+                    <img src="{% static 'images/Lenin.jpg' %}" alt="potoabout" />
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

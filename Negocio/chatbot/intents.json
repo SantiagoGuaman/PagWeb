@@ -1,0 +1,25 @@
+{"intents": [
+    {"tags": "greatings",
+    "patterns": ["hola", "hey", "como estas", "buenas tardes", "buenos dias", "buenas", "saludos"],
+    "responses": ["Hola!", "Hey!", "¿Qué puedo hacer por usted?", "¿En qué le puedo ayudar?", "Saludos, ¿qué necesita?",
+    "Muy buenas, ¿Cuál es su pregunta?"]
+    },
+    {"tags": "goodbye",
+    "patterns": ["adios", "hasta pronto", "me voy", "hasta luego", "nos vemos", "hasta otra", "chao"],
+    "responses": ["Adios", "Hasta luego", "Hasta pronto", "Hasta la próxima", "Un gusto, nos vemos",
+    "Nos vemos"]
+    },
+    {"tags": "print",
+    "patterns": ["necesito saber sobre impresiones", "el servicio de impresion", "servicio de impresion 3d", "Servicios de impresion 3d"],
+    "responses": ["Puede consultar sobre ello en el apartado de contacto", "Los productos tienen su descripción", "Puede comunicar su duda al correo que está en el pie de página",
+     "Si desea saber más, puede comunicarse con nuestra empresa con al número 9876543210"]},
+    {"tags": "shop",
+    "patterns": ["ayuda con los productos", "un producto", "el articulo", "quiero comprar algo", "que me recomiendas", "que venden", "que ofrecen"],
+    "responses": ["Brindamos servicios de impresión 3D", "Para ver los productos puede dar clic en el botón Productos", "Los productos tienen una descripción detallada que puede consultar"]
+    },
+    {"tags": "files",
+    "patterns": ["peso", "extension", "subir archivo", "archivo", "render", "mi proyecto", "mi trabajo", "subir archivos", "tipo de archivos"],
+    "responses": ["Puede cotizar su proyecto personal subiéndolo", "Si desea más información de los archivos, puede consultar con el encargado usando el número telefónico: 1234567890",
+    "Los archivos deben tener una extensión .obj", "", "El peso máximo es de 200 mb",
+    "La página de cotizaciones le brinda información extra si lo desea"]}
+]}

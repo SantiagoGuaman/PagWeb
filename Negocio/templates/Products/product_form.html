@@ -1,0 +1,24 @@
+<div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title" >Editar producto -- {{ product }}</h2>
+            <button class="close btn btn-outline-secondary btn-sm" type="button" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="col-md-12 offset-md-0">
+
+            <form method="POST" action="{% url 'update_product' pk=product.id %}" class="card card-body text-left">
+                {% csrf_token %}
+                <div class="modal-body">
+                    {{form.as_p}}
+                </div>
+                <div class="modal-footer">
+                    <div class="form-group">
+                        <input class="btn btn-primary btn-sm center" type="submit" value="Aceptar">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

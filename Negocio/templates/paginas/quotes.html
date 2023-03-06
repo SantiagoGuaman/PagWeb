@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+Quotes
+{% endblock %}
+
+{% block contenido %}
+<form action="../quotes/" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="quotes-container">
+        <div>
+            <h1>Sube tu modelo y obtén asesoría inmediata</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat voluptas hic inventore voluptatum saepe
+                ratione omnis nulla maiores? Accusantium totam perspiciatis error esse magni velit placeat non
+                temporibus, iusto perferendis in voluptas itaque, explicabo dicta voluptatum iste recusandae adipisci
+                eum id eaque! At, maiores nemo. Quam deserunt fuga accusamus velit ipsa distinctio cumque impedit
+                repellendus, beatae facilis ex voluptatem sint, vero minus tempore? Tempore aut delectus velit fuga
+                ipsam et ipsum voluptatem necessitatibus nam voluptas error cumque, est magnam reprehenderit numquam
+                voluptatibus reiciendis. Eos voluptas nihil animi,
+                sit possimus vitae perspiciatis non illo impedit molestiae, quaerat ullam praesentium et excepturi.</p>
+        </div>
+        <div class="form-control-sm">
+            <input name="myfile" type="file" class="form-control-file form-control-file-sm"/>
+            <input class="form-control-file btn-dark btn-sm" type="submit">
+        </div>
+    </div>
+</form>
+{% if uploaded_file_url %}
+<p>Archivo subido en: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+{% endif %}
+{% endblock %}

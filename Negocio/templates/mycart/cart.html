@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Mi Carrito
+{% endblock %}
+
+{% block contenido %}
+<form action="">
+    <section class="h-100 h-custom">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12">
+                    <div class="card card-registration card-registration-2" style="border-radius: 5px;">
+                        <div class="card-body p-0">
+                            <div class="row g-0">
+                                <div class="col-lg-9">
+                                    <div class="p-5">
+                                        <div class="d-flex justify-content-between align-items-center mb-5">
+                                            <h1 class="fw-bold mb-0 text-black">Mi Carrito</h1>
+                                        </div>
+
+                                        <div class="mb-4 d-flex justify-content-between align-items-center">
+                                            <div class="col-md-2 col-lg-3 col-xl-3">
+                                                <h6 class="text">Nombre del producto</h6>
+                                            </div>
+
+                                            <div class="col-md-2 col-lg-2 col-xl-2 offset-lg-1">
+                                                <h6 class="mb-0">Precio Unidad</h6>
+                                            </div>
+                                            <div class="col-md-1 col-lg-2 col-xl-3 offset-lg-1">
+                                                <h5 class="mb-0">Precio</h5>
+                                            </div>
+                                        </div>
+
+                                        <hr class="my-4">
+                                        {% for item in items %}
+                                            <div class="row mb-2 d-flex justify-content-between align-items-center">
+                                                <div class="col-md-1 col-lg-1 col-xl-1">
+                                                    {% if item.producto.foto %}
+                                                        <img src="{{item.producto.foto.url}}"
+                                                            class="img-fluid rounded-2" alt="Not available">
+                                                    {% endif %}
+                                                </div>
+                                                <div class="col-md-3 col-lg-1 col-xl-2">
+                                                    <h6 class="text-black mb-0">{{item.producto.nombre}}</h6>
+                                                </div>
+                                                <!--<div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                                    <button class="btn btn-link px-2"
+                                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                                        <i class="fas fa-minus"></i>
+                                                    </button>
+
+                                                    <input id="form1" min="0" name="quantity" value="1" type="number"
+                                                        class="form-control form-control-sm" />
+
+                                                    <button class="btn btn-link px-2"
+                                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                                        <i class="fas fa-plus"></i>
+                                                    </button>
+                                                </div>-->
+
+                                                <div class="col-md-3 col-lg-1 col-xl-1 offset-lg-1">
+                                                    <h6 class="mb-0">{{item.cantidad_item}}</h6>
+                                                </div>
+
+                                                <div class="col-md-3 col-lg-1 col-xl-2 offset-lg-1">
+                                                    <h6 class="mb-0">$ {{item.producto.precio}}</h6>
+                                                </div>
+                                                <div class="col-md-3 col-lg-1 col-xl-2 offset-lg-1">
+                                                    <h6 class="mb-0">$ {{item.price}}</h6>
+                                                </div>
+                                                <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                                    <button id="btn-delete" class="btn btn-danger btn-sm" value="{{item.producto.id}}"><i class="fas fa-times"></i></button>
+                                                    <a href="#!" class="text-muted"></a>
+                                                </div>
+                                                
+                                            </div>
+                                        {% endfor %}
+
+                                        <hr class="my-4">
+
+                                        <div class="pt-5">
+                                            <h6 class="mb-0 "><a href="{% url 'products' %}"
+                                                class="btn btn-secondary btn-sm active" role="button" aria-pressed="true">Volver al
+                                                    catálogo</a></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 bg-grey">
+                                    <div class="p-5">
+                                        <h4 class="fw-bold mb-5 mt-2 pt-1">Resumen</h4>
+                                        <hr class="my-4">
+
+                                        <div class="d-flex justify-content-between mb-4">
+                                            <h7 class="text-uppercase">Número de Productos:</h7>
+                                            <h2>{{cart.num_of_items}}</h2>
+                                        </div>
+
+                                        <hr class="my-4">
+
+                                        <div class="d-flex justify-content-between mb-5">
+                                            <h5 class="text-uppercase">Total</h5>
+                                            <h6>$ {{cart.total_price}}</h6>
+                                        </div>
+
+                                        <a type="button" class="btn btn-dark btn-block btn-sm"
+                                            data-mdb-ripple-color="dark" href="{% url 'payment' %}">Pagar</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
+{% endblock %}

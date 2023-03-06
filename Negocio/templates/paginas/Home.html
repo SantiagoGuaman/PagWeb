@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block titulo %} Home {% endblock %}
+
+<link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+{% block contenido %}
+<div class="container-general">
+    <div class="main-container">
+        <div class="dinamic-text">
+            <h2><span class="multitext"></span></h2>
+        </div>
+        <div class="textarea">
+            <h5>
+                <p id="parrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus ut sequi minima optio
+                    molestiae nemo ratione dolorem impedit! Aut ad ratione quas doloribus ipsa minima, natus quod,
+                    veniam obcaecati quisquam nisi at optio praesentium ex perferendis voluptate odit voluptatibus
+                    corporis!</p>
+            </h5>
+        </div>
+        <div class="btns-container">
+            <div>
+                <button class="btn btn-outline-dark btn-block" onclick="window.location.href='{% url 'quotes' %}';">
+                    Cotizar
+                </button>
+            </div>
+            <div>
+                <button class="btn btn-outline-secondary" onclick="window.location.href='{% url 'products' %}';">
+                    Productos
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-4">
+        <div class="row">
+            <div class="col-sm">
+                <div class="slider-frame">
+                    <ul>
+                        <li><img src="{% static 'images/example1.jpg' %}" alt=""></li>
+                        <li><img src="{% static 'images/example2.jpg' %}" alt=""></li>
+                        <li><img src="{% static 'images/example3.jpg' %}" alt=""></li>
+                        <li><img src="{% static 'images/example4.jpg' %}" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+</div>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    var typingEffect = new Typed(".multitext", {
+        strings: ["IMPRESIONES 3D", "ARTÍCULOS", "Tus Proyectos...", "¡Cuenta con Nosotros ;)!"],
+        loop: true,
+        typeSpeed: 90,
+        backSpeed: 80,
+        backDelay: 900
+    })
+</script>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    Pagos
+{% endblock %}
+{% block contenido %}
+<div class="container py-5">
+    <div class="row mb-4">
+        <div class="col-lg-8 mx-auto text-center">
+            <h1 class="display-6">Opciones de pago</h1>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col-lg-6 mx-auto">
+            {% if completed %}
+                <div class="alert alert-success" role="alert">
+                    <p>{{ completed }}</p>  
+                </div>
+            {% endif %}
+            <div class="card ">
+                <div class="card-header">
+                    <div class="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2">
+                        <ul role="tablist" class="nav bg-white nav-pills rounded nav-fill mb-3">
+                            <li class="nav-item"> <h5 data-toggle="pill" class="bk-light"> <i class="fas fa-credit-card mr-2"></i> Tarjeta de crédito </h5> </li>
+                        </ul>
+                    </div> 
+                    <div class="tab-content">
+                        <div id="credit-card" class="tab-pane fade show active pt-3">
+                            <form action="{% url 'payment' %}"  method="POST" role="form">
+                                {% csrf_token %}
+                                <div class="form-group"> <label for="nombre">
+                                        <h6>Nombre</h6>
+                                    </label> <input type="text" name="nombre" placeholder="Nombre del dueño de la tarjeta" required class="form-control "> </div>
+                                <div class="form-group"> <label for="cardNumber">
+                                        <h6>Número de tarjeta</h6>
+                                    </label>
+                                    <div class="input-group"> <input type="text" name="card" placeholder="Número de tarjeta válido" class="form-control " required minlength="18" maxlength="19">
+                                        <div class="input-group-append"> <span class="input-group-text text-muted" title="Tarjetas aceptadas VISA o MASTERCARD"> <i class="fab fa-cc-visa mx-1"></i> <i class="fab fa-cc-mastercard mx-1"></i> </span> </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <div class="form-group"> <label><span class="hidden-xs">
+                                                    <h6>Fecha de expiración</h6>
+                                                </span></label>
+                                            <div class="input-group"> <input type="number" placeholder="MM" name="month" class="form-control" required min="1" max="12"> <input type="number" placeholder="YY" name="year" class="form-control" required min="2010" max="2050"> </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group mb-4"> <label data-toggle="tooltip" title="Los tres dígitos que se encuentran en reverso de su tarjeta">
+                                                <h6>CVV <i class="fa fa-question-circle d-inline"></i></h6>
+                                            </label> <input type="number" required class="form-control" name="cvv" min="3" max="4"> </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer"> <button class="btn btn-dark btn-block shadow-sm" type="submit"> Confirmar Pago </button>
+                            </form>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

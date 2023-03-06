@@ -1,0 +1,654 @@
+
+
+
+header nav a{
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a img {
+    height: 40px;
+    margin-left: 10px;
+}
+
+header nav div {
+    color: white;
+}
+
+
+.container-content {
+    position: relative;
+    min-height: 100vh;
+    max-width: 100%;
+}
+/*Pie de página*/
+footer {
+    position: fixed;
+    bottom: 0;
+    background: black;
+}
+
+.footer-container {
+    display: flex;
+    color: white;
+}
+
+.footer-container .box {
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+
+.box h2 {
+    font-size: small;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.box .cont {
+    margin: 20px 0 0 0;
+}
+
+ .left .cont .social {
+    margin: 20px 0 0 0;
+}
+
+.center .cont .message textarea {
+    margin-left: 20px;
+    color: white;
+    background-color: transparent;
+    border: none;
+        
+}
+
+.center .cont div input[type='text'] {
+    background-color: transparent;
+    color: white;
+}
+
+.center .cont .email input[type='email'] {
+    background-color: transparent;
+    color: white;
+}
+
+.main-container{
+    margin-top: 20px;
+    margin: 80px;
+    float: left;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15%;
+    overflow: hidden;
+}
+
+.main-container .dinamic-text {
+    min-width: 500px;
+    padding-right: 100px;
+    bottom: auto;
+}
+
+.main-container div {
+    display: flex;
+    margin-left: 10px;
+}
+
+
+/*Slider images*/
+.slider-frame{
+    float: left;
+    margin-top: 50px;
+    height: 500px;
+    width: 700px;
+    margin-right: 100px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.slider-frame ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 12s backwards infinite;
+}
+.slider-frame li{
+    list-style: none;
+    width: 50%;
+}
+.slider-frame img{
+    width: 100%;
+}
+
+.link{
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    line-height: 1.6;
+    font-weight: bold;
+    text-decoration: none; 
+    margin-right: 15px;
+}
+
+.main-container{
+    padding-left: 10px;
+    width: 380px;
+    height: 400px;
+}
+
+
+.main-container .textarea p{
+    width: 300px;
+    font-size: medium;
+}
+
+div button:hover{
+    background-color: rgb(100, 100, 100);
+}
+
+/*Register*/
+
+.container-form{
+    display: block;
+    width: 300px;
+    min-width: 200px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.container-form b {
+    color: black;
+}
+
+.register-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.register-form .container-form b {
+    display: block;
+    text-align: center;
+    color: black;
+    letter-spacing: 1px;
+    text-transform:capitalize;
+    text-decoration: none;
+    font-size: medium;
+    margin: 5px;
+}
+
+.register-form .btn-container {
+    display: block;
+    width: 300px;
+    min-width: 200px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 10px;
+    border: 2px solid black;
+}
+
+.btn-container div {
+    font-size: small;
+    letter-spacing: 1px;
+    margin: 10px;
+}
+
+.register-form .container-form button {
+    margin: 10px;
+    height: 40px;
+    width: 90%;
+    font-size: small;
+    color: rgb(70, 70, 70);
+    background: transparent;
+    border-radius: 5px;
+    box-shadow: none;
+    border: solid 2px rgb(50, 50, 50);
+}
+
+.register-form .container-form button:hover {
+    transition: .2s;
+    border: solid 2px rgb(20, 104, 231);
+    color: rgb(45, 76, 212);
+}
+
+.register-form .container-form  p label {
+    color: black;
+    margin: 10px;
+    letter-spacing: 1px;
+}
+
+form input {
+    margin: auto;
+    height: 40px;
+    width: 90%;
+    border:  1px solid black;
+    padding-left: 10px;
+    margin: 10px;
+    background: transparent;
+    border-radius: 6px;
+    outline: none;
+}
+
+.register-form .btn-container a {
+    color: dimgray;
+}
+
+form input[type="text"] {
+    margin-top: 10px;
+    color: dimgrey;
+}
+
+form input[type="password"] {
+    color: dimgrey;
+}
+
+/*Log in*/
+
+.login-container {
+    display: block;
+    padding: 10px;
+    width: 300px;
+    min-width: 200px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 10px;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.login-container b {
+    display: block;
+    text-align: center;
+    color: black;
+    letter-spacing: 2px;
+    text-transform:uppercase;
+    text-decoration: none;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px;
+}
+
+.login-container h4 {
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: small;
+    letter-spacing: 1px;
+    margin-left: 10px;
+}
+
+.login-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-form p label {
+    color: black;
+}
+
+.login-form .btn-login button {
+    margin: 10px;
+    height: 40px;
+    width: 90%;
+    color: rgb(5, 5, 5);
+    background: transparent;
+    border-radius: 5px;
+    box-shadow: none;
+    border: solid 2px dimgray;
+}
+
+.login-form .btn-login button:hover {
+    transition: .2s;
+    border: solid 2px dimgrey;
+    color: dimgray;
+}
+
+.login-form .btn-container {
+    display: block;
+    width: 300px;
+    min-width: 200px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 10px;
+    border: 1px solid black;
+    margin-top: 10px;
+    color: black;
+    font-size: small;
+    text-decoration: none; 
+}
+
+.login-form .btn-container {
+    padding: 10px;
+}
+
+.login-form .btn-container a {
+    color: rgb(105, 104, 104);
+    font-size: small;
+    padding-left: 30px;
+}
+
+.login-form .btn-container a:hover {
+    color: rgb(219, 219, 219);
+}
+
+/*Contact Us*/
+.content{
+    overflow: hidden;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+.info-container{
+    float: left;
+}
+
+.content b {
+    display: block;
+    margin-bottom: 20px;
+    color: black;
+    letter-spacing: 1px;
+    font-size: x-large;
+}
+
+.info-container iframe{
+    width: 600px;
+    height: 330px;
+    border-radius: 5px;
+}
+
+.info-container .information b{
+    font-size: medium;
+    color: black;
+    font-weight: bold;
+}
+
+.info-container .information .subtitle {
+    font-size: small;
+    color: dimgrey;
+}
+
+/*Products*/
+.product-form .product-container {
+    border: solid 1px white;
+    margin-top: 100px;
+    border-radius: 5px;
+    display: block;
+}
+
+.product-form .product-container label {
+    color: black;
+    letter-spacing: 2px;
+    padding: 10px;
+    font-size: small;
+}
+
+.product-form .product-container input[type="text"] {
+    color: white;
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    width: 500px;
+    height: 30px;
+    border-radius: 0px;
+}
+
+.product-form .product-container input[type="number"] {
+    color: white;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    width: 500px;
+    height: 30px;
+    border-radius: 0px;
+}
+
+.product-form .product-container textarea {
+    color: white;
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    width: 500px;
+    height: 40px;
+    background-color: transparent;
+    border: solid 1px white;
+    border-radius: 0px;
+}
+
+.product-form .product-container input[type="file"] {
+    color: white;
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    width: 500px;
+    height: 30px;
+    background-color: transparent;
+    border: solid 1px white;
+    border-radius: 0px;
+    margin: 5px;
+}
+
+
+
+/*Quotes*/
+.quotes-container div{
+    margin: 20px;
+}
+
+.quotes-container h1 {
+    position: relative;
+    margin-top: 50px;
+    color: black;
+}
+
+.quotes-container div p {
+    position: relative;
+    margin-left: 40px;
+    margin-right: 200px;
+    font-size: medium;
+}
+
+
+
+.quotes-container .input-container input[type="file"] {
+    position: relative;
+    letter-spacing: 1px;
+    border-top-left-radius: 2px;
+    height: 80px;
+    justify-content: center;
+    width: 800px;
+
+}
+
+/*Catalogue*/
+.cat-container {
+    margin: 0;
+}
+
+.cat-container .sub-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    height: 80px;
+}
+
+.cat-container .sub-bar b {
+    color: black;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-left: -75px;
+}
+
+.cat-container .sub-bar select {
+    background-color: rgb(92, 92, 92);
+    border: none;
+    font-size: small;
+    color: white;
+    height: 40px;
+    width: 200px;
+    border-radius: 2px;
+    margin-right: 10px;
+    font-weight: bolder;
+}
+
+.cat-container .sub-bar select option {
+    letter-spacing: 1px;    
+}
+
+.cat-container .sub-bar input[type="text"] {
+    color: rgb(0, 0, 0);
+    border-radius: 1px;
+    border: 1px solid black;
+    letter-spacing: 1px;
+    height: 40px;
+    width: 400px;
+}
+.cat-container .sub-bar .search-btn {
+    background-color: rgb(0, 0, 0);
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    height: 40px;
+    width: 100px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    box-shadow: none;
+    transition: .2;
+}
+
+.cat-container .sub-bar .search-btn:hover {
+    background-color: rgb(192, 192, 192);
+    color: rgb(0, 0, 0);
+    transition: 0.2s;
+}
+
+.cat-container .product-list {
+    color: black;
+    letter-spacing: 1px;
+}
+
+.cat-container section {
+    background-color: #eee;
+    display: flex;
+}
+
+.cat-container .product-list .product-display {
+    display: flex;
+    letter-spacing: 1px;
+}
+
+.cat-container .product-list .product-block img {
+    height: 100px;
+}
+
+.cat-container .product-list hr {
+    padding-left: 10px;
+}
+/*About Us*/
+.about-container {
+    margin: 100px;
+    color: black;
+    position: relative;
+}
+
+.about-container img {
+    display: flex;
+    justify-content: center;
+}
+
+.about-container b {
+    display: block;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.about-container h1 {
+    letter-spacing: 1px;
+}
+
+.about-container img {
+    height: 100px;
+
+}
+
+.about-container div {
+    margin: 10px;
+    display: block;
+    border-radius: 5px;
+    float: left;
+    background-color: rgb(75, 75, 75);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);  
+    width: 500px;
+    height: 300px;
+}
+
+.about-container div p {
+    color: white;
+    line-height: 1.5;
+    padding-left: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.about-container div .name {
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/*Cart*/
+@media (min-width: 1025px) {
+.h-custom {
+height: 100vh !important;
+}
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+font-size: 1rem;
+line-height: 2.15;
+padding-left: .75em;
+padding-right: .75em;
+}
+
+.card-registration .select-arrow {
+top: 13px;
+}
+
+.bg-grey {
+background-color: #eae8e8;
+}
+
+@media (min-width: 992px) {
+.card-registration-2 .bg-grey {
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+}
+
+@media (max-width: 991px) {
+.card-registration-2 .bg-grey {
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+}
+
+/* Animations*/
+@keyframes slide {
+    0% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+    
+    35% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    65% {margin-left: -200%;}
+    
+    70% {margin-left: -300%;}
+    90% {margin-left: -300%;}
+}

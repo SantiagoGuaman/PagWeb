@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block titulo %}
+Mis Proyectos
+{% endblock %}
+
+{% block contenido %}
+<section class="h-100 h-custom">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12">
+                <div class="card card-registration card-registration-2" style="border-radius: 5px;">
+                    <div class="card-body p-0">
+                        <div class="row g-0">
+                            <div class="col-lg-8">
+                                <div class="p-5">
+                                    <div class="d-flex justify-content-between align-items-center mb-5">
+                                        <h1 class="fw-bold mb-0 text-black">Mis Archivos</h1>
+                                        <h6 class="mb-0 text-muted">N° de archivos: </h6>
+                                    </div>
+                                    <hr class="my-4">
+                                    {% if user.is_authenticated %}
+                                        {% for file in files %}
+                                            <div class="row mb-4 d-flex justify-content-between align-items-center">
+                                                <div class="col-md-3 col-lg-3 col-xl-3">
+                                                    <h6 class="text-muted">Archivo <i class="bi bi-badge-3d-fill">:</i></h6>
+                                                    <h6 class="text-black mb-0">{{file.file}}</h6>
+                                                </div>
+
+                                                <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                                    <button onclick="open_modal_delete('{% url 'delete_file' file.id %}')" class="btn btn-danger btn-sm" value="{{ file.id }}"><i class="fas fa-times"></i></button>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    {% endif %}
+                                    <hr class="my-4">
+
+                                    <div class="pt-5">
+                                        <h6 class="mb-0 "><a href="{% url 'quotes' %}"
+                                            class="btn btn-secondary btn-sm active" role="button" aria-pressed="true">Añadir al
+                                                repositorio</a></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 bg-grey">
+                                <div class="p-5">
+                                    <h4 class="fw-bold mb-5 mt-2 pt-1">Mi cuenta</h4>
+                                    <hr class="my-4">
+
+                                    <div class="d-flex justify-content-between mb-4">
+                                        <h6 class="text-uppercase"></h6>
+                                        <h7></h7>
+                                    </div>
+
+                                    <hr class="my-4">
+
+                                    <div class="d-flex justify-content-between mb-5">
+                                        <h5 class="text-uppercase"></h5>
+                                        <h6></h6>
+                                    </div>
+
+                                   <!-- <button type="button" class="btn btn-dark btn-block btn-sm"
+                                        data-mdb-ripple-color="dark">Pagar</button> -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="DeleteFile" role="dialog">
+
+</div>
+
+
+{% endblock %}
+
+
+{% block javascript %}
+    <script type="text/javascript">
+        var $ = jQuery.noConflict();
+        var dato = document.getElementById("id-title").innerText;
+        function open_modal_delete(url) {
+            $('#DeleteFile').load(url, function () {
+                $(this).modal('show');
+            });
+        }
+    </script>
+{% endblock %}

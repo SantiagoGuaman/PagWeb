@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+Registrarse
+{% endblock %}
+
+{% block contenido %}
+<!-- Section: Design Block -->
+<section class="text-center">
+    <div class="mx-2 mx-md-2 mt-2 mb-2" >
+        <div class="card-body">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <h2 class="fw-bold mb-2 mt-5">Registrarse</h2>
+                    <form method="POST" action=".">
+                        {% csrf_token %}
+
+                        <div class="form-outline mb-4">
+                            {{form.username}}
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            {{form.email}}
+                            </div>
+
+                        <div class="form-outline mb-4">
+                            {{form.password1}}
+                            </div>
+
+                        <div class="form-outline mb-4">
+                            {{form.password2}}
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            <p class="text-danger">{{Error}}</p>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-block mb-4">
+                            Registrarme
+                        </button>
+
+                        <!-- Register buttons -->
+                        <div class="text-center">
+                            <p>O si ya tienes cuenta:</p>
+                            <a  href="{% url 'login' %}" type="button" class="btn btn-dark btn-floating mx-1">
+                                Ingresar
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
