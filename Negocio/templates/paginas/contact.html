@@ -1,32 +1,77 @@
 {% extends 'base.html' %}
 
 {% block titulo %}
-    Contáctanos
+Contáctanos
 {% endblock %}
 
 {% block contenido %}
-    <div class="content">
-        <b>Contáctanos</b>  
-        <div class="info-container me-5">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.779961801275!2d-78.97717428587177!3d-2.8797269979024507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cd1781c898f975%3A0xfd4a76bc986f8990!2sTec%20Azuay%20INSTITUTO%20UNIVERSITARIO!5e0!3m2!1ses!2sec!4v1673904141641!5m2!1ses!2sec" 
+<div class="mt-4 ms-4">
+    <h4 class="">Contáctanos</h4>
+</div>
+<div class="content d-flex">
+
+    <div class="info-container me-5">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.779961801275!2d-78.97717428587177!3d-2.8797269979024507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cd1781c898f975%3A0xfd4a76bc986f8990!2sTec%20Azuay%20INSTITUTO%20UNIVERSITARIO!5e0!3m2!1ses!2sec!4v1673904141641!5m2!1ses!2sec"
             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <div class="information">
-                <b>
-                    <i class="bi bi-geo-alt"></i>
-                    Dirección:
-                    <b class="subtitle">Octavio Chacón</b>
-                </b>
-                <b>
-                    <i class="bi bi-envelope"></i>
-                    Correo electrónico:
-                    <b class="subtitle">tecazuay@gmail.edu.ec</b>
-                </b>
-                <b>
-                    <i class="bi bi-telephone"></i>
-                    Teléfono:
-                    <b class="subtitle">0987654321</b>
-                </b>
-            </div>
+        <div class="information">
+            <b>
+                <i class="bi bi-geo-alt"></i>
+                Dirección:
+                <b class="subtitle">Octavio Chacón</b>
+            </b>
+            <b>
+                <i class="bi bi-envelope"></i>
+                Correo electrónico:
+                <b class="subtitle">tecazuay@gmail.edu.ec</b>
+            </b>
+            <b>
+                <i class="bi bi-telephone"></i>
+                Teléfono:
+                <b class="subtitle">0987654321</b>
+            </b>
         </div>
     </div>
+    <div class="form-group form-group-lg ms-4">
+        <h5 class="ms-4">Escríbenos</h5>
+        <form class="form-control ms-4 me-4" action=".{% url 'send' %}" method="POST">
+            {% csrf_token %}
+    
+            {% if message %}
+            <div class="alert alert-success" role="alert">
+                {{ message }}
+            </div>
+    
+            {% endif %}
+    
+            <div class="name me-4">
+                <label for="nombre" >Nombre:</label>
+                <input class="form-control me-4" name="nombre" type="text" placeholder="John" required>
+            </div>
+    
+            <div class="lastname me-4">
+                <label for="apellido" >Apellido:</label>
+
+                <input class="form-control" name="apellido" type="text" placeholder="Smith" required>
+            </div>
+    
+            <div class="email me-4">
+                <label for="nombre" >Email:</label>
+                <input class="form-control" name="mail" type="email" placeholder="example@gmail.com" required>
+            </div>
+    
+            <div class="message ms-2 me-3">
+                <label for="mensaje" class="mb-2 me-4">Mensaje:</label>
+                <textarea class="form-control" name="mensaje" cols="26" rows="3" required placeholder="Hola me interesa contactarme..."></textarea>
+    
+            </div>
+            <div class="mt-3 justify-content-center">
+                <button class="btn btn-primary" type="submit" role="button">
+                    Enviar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
 {% endblock %}

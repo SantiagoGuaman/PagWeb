@@ -10,7 +10,9 @@
   </title>
   <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-<!-- Código de instalación Cliengo para http://127.0.0.1:8000/ --> <script type="text/javascript">(function () { var ldk = document.createElement('script'); ldk.type = 'text/javascript'; ldk.async = true; ldk.src = 'https://s.cliengo.com/weboptimizer/640523963919d3002556b659/640523983919d3002556b65c.js?platform=dashboard'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ldk, s); })();</script>
+  <!-- Código de instalación Cliengo para http://127.0.0.1:8000/ -->
+  <script
+    type="text/javascript">(function () { var ldk = document.createElement('script'); ldk.type = 'text/javascript'; ldk.async = true; ldk.src = 'https://s.cliengo.com/weboptimizer/640523963919d3002556b659/640523983919d3002556b65c.js?platform=dashboard'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ldk, s); })();</script>
 
   <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
   <link rel="shortcut icon" type="image/x-icon" href="{% static 'icons/FavLOGO.png' %}">
@@ -40,7 +42,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Ayuda<span class="sr-only"></span></a>
+            <a class="nav-link" href="{% url 'contactus' %}">Contáctanos<span class="sr-only"></span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'cart' %}">Carrito</a>
@@ -70,7 +72,7 @@
   </header>
 
   <main>
-    <div class="container-content">
+    <div class="container-contenido">
       {% block contenido %}
 
       {% endblock %}
@@ -82,57 +84,27 @@
       <div class="left box">
         <h2>Redes sociales</h2>
         <div class="cont">
-          
-          <div class="social">
-            <a class="btn btn-dark" href="https://es-la.facebook.com/" role="button"><i class="fab fa-facebook-f"></i></a>
 
-            <a class="btn btn-dark" " href="https://twitter.com/?lang=es" role="button"><i class="fab fa-twitter"></i></a>
+          <div class="social">
+            <a class="btn btn-dark" href="https://es-la.facebook.com/" role="button"><i
+                class="fab fa-facebook-f"></i></a>
+
+            <a class="btn btn-dark" " href=" https://twitter.com/?lang=es" role="button"><i
+                class="fab fa-twitter"></i></a>
 
             <a class="btn btn-dark" href="https://www.instagram.com/" role="button"><i class="fab fa-instagram"></i></a>
-      
-            <a class="btn btn-dark" " href="https://www.youtube.com/" role="button"><i class="fab fa-youtube"></i></a>
+
+            <a class="btn btn-dark" " href=" https://www.youtube.com/" role="button"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
       </div>
 
       <div class="center box">
-        <a href="{% url 'contactus' %}">
-          <h2>Contáctanos</h2>
+        <a href="{% url 'about' %}">
+          <h2>Conócenos</h2>
         </a>
         <div class="cont">
-          <form action=".{% url 'send' %}" method="POST">
-            {% csrf_token %}
-
-            {% if message %}
-              <div class="alert alert-success" role="alert">
-                {{ message }}
-              </div>
-
-            {% endif %}
-
-            <div class="name">
-              <input name="nombre" type="text" placeholder="Nombre" required>
-            </div>
-
-            <div class="lastname">
-              <input name="apellido" type="text" placeholder="Apellido" required>
-            </div>
-
-            <div class="email">
-              <input name="mail" type="email" placeholder="Correo" required>
-            </div>
-
-            <div class="message">
-              <textarea name="mensaje" cols="25" rows="2" required placeholder="Mensaje"></textarea>
-
-            </div>
-            <div class="btn">
-              <button class="btn btn-primary" type="submit" role="button">
-                Enviar
-              </button>
-            </div>
-          </form>
-          <a href="{% url 'about' %}"></h2>Conócenos</h2></a>
+          <p>Proporcionamos soluciones innovadoras a problemas complejos.</p>
         </div>
       </div>
 
@@ -140,11 +112,24 @@
         <h2> Póliticas de privacidad</h2>
         <div class="cont">
           <div class="politic">
-            <p>Todos los derechos reservados. Su información es almancenada de acuerdo con estándares nacionales, sus
-              datos están a salvo.
+            <p>
               Esta página no se hace responsable del mal uso de información por parte del usuario.
               Para mayor información puede consultar la normativa internacional de manejo de información.
-              Para más información puede visitar el siguiente enlance: <a href="http://iima.org/wp/"> IMMA</a>
+              <hr style="background-color: transparent;">
+            <p>●
+              <a href="http://iima.org/wp/">IMMA</a>
+            </p>
+            </p>
+          </div>
+          <div class="politic">
+
+            <p>● <a href="#">FAQ</a>
+            </p>
+            <hr style="background-color: transparent;">
+          </div>
+          <div class="politic">
+            <p>
+              Todos los derechos reservados.
             </p>
           </div>
         </div>
